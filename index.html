@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Monika | Freelance Digital Marketing Specialist &amp; Consultant</title>
+<meta name="description" content="Monika is a freelance digital marketing specialist helping small businesses and startups grow through SEO, social media, paid ads and content strategy. View her services, work and story.">
+<meta name="keywords" content="Monika digital marketing, freelance digital marketer, SEO freelancer, social media marketing freelancer, digital marketing consultant, freelance marketing portfolio, JClick Solutions">
+<meta name="author" content="Monika">
+<meta name="robots" content="index, follow">
+
+<style>
+/* =========================================================
+   MONIKA — DIGITAL MARKETING FREELANCER PORTFOLIO
+   Theme: Monochrome editorial (black & white only)
+   Single-file build — all CSS and JS inline, all links internal
+   ========================================================= */
+
+:root{
+  --ink:#0a0a0a;
+  --paper:#fafaf8;
+  --white:#ffffff;
+  --charcoal:#242424;
+  --steel:#6e6e6e;
+  --hairline:#d8d8d5;
+  --hairline-dark:#3a3a3a;
+
+  --font-display: Georgia, 'Times New Roman', Times, serif;
+  --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: 'Courier New', Courier, monospace;
+
+  --max: 1180px;
+}
+
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--font-body);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+img, svg{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+
+.wrap{ max-width:var(--max); margin:0 auto; padding:0 32px; }
+
+.eyebrow{
+  font-family:var(--font-mono);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-size:12px;
+  color:var(--steel);
+}
+.eyebrow.on-dark{ color:#bdbdbd; }
+
+header.site-header{
+  position:sticky; top:0; z-index:50;
+  background:rgba(250,250,248,.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid var(--hairline);
+}
+.nav-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 32px; max-width:var(--max); margin:0 auto;
+}
+.brand{ font-family:var(--font-display); font-weight:700; font-size:22px; letter-spacing:.02em; }
+.brand span{ font-family:var(--font-mono); font-size:12px; letter-spacing:.2em; color:var(--steel); display:block; margin-top:2px; text-transform:uppercase; font-weight:400; }
+
+nav.main-nav ul{ display:flex; gap:32px; list-style:none; margin:0; padding:0; }
+nav.main-nav a{
+  font-family:var(--font-mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+  padding-bottom:4px; border-bottom:1px solid transparent;
+  transition:border-color .2s ease, opacity .2s ease;
+}
+nav.main-nav a:hover, nav.main-nav a.active{ border-bottom:1px solid var(--ink); }
+
+.nav-toggle{ display:none; background:none; border:1px solid var(--ink); padding:8px 10px; font-family:var(--font-mono); font-size:12px; cursor:pointer; }
+
+@media (max-width: 800px){
+  nav.main-nav{ position:absolute; top:100%; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--hairline); display:none; }
+  nav.main-nav.open{ display:block; }
+  nav.main-nav ul{ flex-direction:column; gap:0; padding:8px 32px 20px; }
+  nav.main-nav li{ border-bottom:1px solid var(--hairline); }
+  nav.main-nav a{ display:block; padding:14px 0; border-bottom:none; }
+  .nav-toggle{ display:block; }
+}
+
+.hero{ padding:96px 0 72px; border-bottom:1px solid var(--hairline); }
+.hero-grid{ display:grid; grid-template-columns:1.15fr .85fr; gap:56px; align-items:center; }
+@media (max-width: 900px){ .hero-grid{ grid-template-columns:1fr; } }
+
+h1.display{
+  font-family:var(--font-display);
+  font-size:clamp(40px, 6vw, 68px);
+  line-height:1.05; margin:18px 0 24px; font-weight:700; letter-spacing:-.01em;
+}
+h1.display em{ font-style:italic; font-weight:400; border-bottom:2px solid var(--ink); }
+
+.lede{ font-size:18px; color:var(--charcoal); max-width:52ch; margin:0 0 32px; }
+
+.btn-row{ display:flex; gap:16px; flex-wrap:wrap; }
+.btn{
+  display:inline-block; font-family:var(--font-mono); font-size:13px; letter-spacing:.08em;
+  text-transform:uppercase; padding:14px 26px; border:1px solid var(--ink);
+  transition:background .2s ease, color .2s ease; cursor:pointer;
+}
+.btn-primary{ background:var(--ink); color:var(--white); }
+.btn-primary:hover{ background:var(--charcoal); }
+.btn-ghost:hover{ background:var(--ink); color:var(--white); }
+
+section{ padding:88px 0; border-bottom:1px solid var(--hairline); scroll-margin-top:90px; }
+section:last-of-type{ border-bottom:none; }
+
+.section-head{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; margin-bottom:48px; flex-wrap:wrap; }
+h2.section-title{ font-family:var(--font-display); font-size:clamp(28px, 4vw, 42px); margin:10px 0 0; font-weight:700; }
+p.section-note{ max-width:38ch; color:var(--steel); font-size:15px; margin:0; }
+
+.numbered-list{ list-style:none; margin:0; padding:0; }
+.numbered-row{ display:grid; grid-template-columns:70px 1fr 1.2fr; gap:28px; padding:32px 0; border-top:1px solid var(--hairline); align-items:start; }
+.numbered-row:last-child{ border-bottom:1px solid var(--hairline); }
+@media (max-width: 760px){ .numbered-row{ grid-template-columns:1fr; gap:8px; } }
+.num{ font-family:var(--font-mono); font-size:14px; color:var(--steel); padding-top:4px; }
+.numbered-row h3{ font-family:var(--font-display); font-size:22px; margin:0; }
+.numbered-row p{ margin:0; color:var(--charcoal); font-size:15px; }
+
+.grid-3{ display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; }
+.grid-2{ display:grid; grid-template-columns:repeat(2, 1fr); gap:28px; }
+@media (max-width: 860px){ .grid-3, .grid-2{ grid-template-columns:1fr; } }
+
+.card{ border:1px solid var(--hairline); padding:32px 28px; background:var(--white); }
+.card h3{ font-family:var(--font-display); font-size:20px; margin:16px 0 10px; }
+.card p{ margin:0; color:var(--charcoal); font-size:14.5px; }
+
+.stat-row{ display:grid; grid-template-columns:repeat(4, 1fr); gap:24px; text-align:left; }
+@media (max-width: 760px){ .stat-row{ grid-template-columns:repeat(2,1fr); } }
+.stat-num{ font-family:var(--font-display); font-size:44px; font-weight:700; }
+.stat-label{ font-family:var(--font-mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--steel); margin-top:6px; }
+
+.inverted{ background:var(--ink); color:var(--paper); border-bottom:none; }
+.inverted .eyebrow{ color:#bdbdbd; }
+.inverted h2.section-title{ color:var(--white); }
+.inverted p{ color:#d6d6d4; }
+
+.case-card{ border:1px solid var(--hairline); background:var(--white); display:grid; grid-template-columns:.9fr 1.1fr; gap:0; margin-bottom:28px; }
+@media (max-width:800px){ .case-card{ grid-template-columns:1fr; } }
+.case-visual{ background:var(--ink); padding:28px; display:flex; align-items:center; justify-content:center; }
+.case-body{ padding:32px 30px; }
+.case-tag{
+  font-family:var(--font-mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--steel); border:1px solid var(--hairline); display:inline-block; padding:4px 10px;
+  margin-right:8px; margin-bottom:14px;
+}
+.case-body h3{ font-family:var(--font-display); font-size:24px; margin:0 0 12px; }
+.case-metrics{ display:flex; gap:28px; margin-top:20px; flex-wrap:wrap; }
+.case-metric b{ font-family:var(--font-display); font-size:26px; display:block; }
+.case-metric span{ font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:.06em; color:var(--steel); }
+
+.timeline{ position:relative; padding-left:32px; border-left:1px solid var(--hairline); }
+.timeline-item{ position:relative; padding-bottom:44px; }
+.timeline-item:last-child{ padding-bottom:0; }
+.timeline-item::before{ content:''; position:absolute; left:-37px; top:4px; width:10px; height:10px; background:var(--ink); border-radius:50%; }
+.timeline-item .eyebrow{ margin-bottom:6px; }
+.timeline-item h3{ font-family:var(--font-display); font-size:20px; margin:0 0 8px; }
+.timeline-item p{ margin:0; color:var(--charcoal); font-size:14.5px; max-width:60ch; }
+
+form.contact-form{ display:grid; gap:20px; max-width:560px; }
+.field{ display:grid; gap:8px; }
+.field label{ font-family:var(--font-mono); font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--steel); }
+.field input, .field textarea{
+  border:none; border-bottom:1px solid var(--hairline); background:transparent;
+  padding:10px 2px; font-family:var(--font-body); font-size:15px; color:var(--ink);
+}
+.field input:focus, .field textarea:focus{ outline:none; border-bottom:1px solid var(--ink); }
+.field textarea{ resize:vertical; min-height:120px; }
+.form-note{ font-size:13px; color:var(--steel); }
+
+footer.site-footer{ padding:56px 0 40px; border-top:1px solid var(--hairline); }
+.footer-grid{ display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+.footer-nav ul{ list-style:none; margin:0; padding:0; display:flex; gap:24px; flex-wrap:wrap; }
+.footer-nav a{ font-family:var(--font-mono); font-size:12.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--steel); }
+.footer-nav a:hover{ color:var(--ink); }
+.footer-bottom{
+  margin-top:32px; padding-top:24px; border-top:1px solid var(--hairline);
+  font-family:var(--font-mono); font-size:12px; color:var(--steel);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+}
+
+.center{ text-align:center; }
+
+.draw-path{ stroke-dasharray:1000; stroke-dashoffset:1000; animation:draw 2.2s ease forwards; }
+@keyframes draw{ to{ stroke-dashoffset:0; } }
+
+@media (prefers-reduced-motion: reduce){
+  .draw-path{ animation:none; stroke-dashoffset:0; }
+  html{ scroll-behavior:auto; }
+}
+
+.fade-in{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+.fade-in.visible{ opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-row">
+    <a href="#home" class="brand">Monika<span>Digital Marketing</span></a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= HOME ================= -->
+  <section id="home" class="hero" style="padding-bottom:80px;">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Freelance Digital Marketing Specialist</p>
+        <h1 class="display">Marketing that reads the <em>numbers</em>, not just the trends.</h1>
+        <p class="lede">I'm Monika — a freelance digital marketer who builds SEO, social media and ad strategies that are easy to measure and easier to trust. One year into freelancing, after learning the fundamentals at JClick Solutions, I still treat every account like it's my first client: no shortcuts, no recycled templates.</p>
+        <div class="btn-row">
+          <a href="#contact" class="btn btn-primary">Start a project</a>
+          <a href="#portfolio" class="btn btn-ghost">See the work</a>
+        </div>
+      </div>
+
+      <div>
+        <svg viewBox="0 0 480 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of an upward marketing growth chart, drawn in black ink on a white background">
+          <rect x="0" y="0" width="480" height="340" fill="var(--white)" stroke="var(--hairline)"/>
+          <line x1="48" y1="18" x2="48" y2="292" stroke="var(--hairline-dark)" stroke-width="1"/>
+          <line x1="48" y1="292" x2="452" y2="292" stroke="var(--hairline-dark)" stroke-width="1"/>
+          <line x1="48" y1="228" x2="452" y2="228" stroke="var(--hairline)" stroke-width="1"/>
+          <line x1="48" y1="164" x2="452" y2="164" stroke="var(--hairline)" stroke-width="1"/>
+          <line x1="48" y1="100" x2="452" y2="100" stroke="var(--hairline)" stroke-width="1"/>
+          <path class="draw-path" d="M60 268 L120 250 L170 258 L220 190 L270 205 L320 120 L370 140 L420 55"
+                fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="var(--ink)">
+            <circle cx="60" cy="268" r="4"/>
+            <circle cx="170" cy="258" r="4"/>
+            <circle cx="270" cy="205" r="4"/>
+            <circle cx="370" cy="140" r="4"/>
+            <circle cx="420" cy="55" r="5"/>
+          </g>
+          <text x="420" y="42" text-anchor="end" font-family="Courier New" font-size="13" fill="var(--ink)">+ organic reach</text>
+          <text x="48" y="310" font-family="Courier New" font-size="11" fill="var(--steel)">Q1</text>
+          <text x="452" y="310" text-anchor="end" font-family="Courier New" font-size="11" fill="var(--steel)">Q4</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="stat-row fade-in">
+        <div><div class="stat-num">1 yr</div><div class="stat-label">Freelancing</div></div>
+        <div><div class="stat-num">6+</div><div class="stat-label">Marketing services</div></div>
+        <div><div class="stat-num">JS</div><div class="stat-label">JClick Solutions intern</div></div>
+        <div><div class="stat-num">100%</div><div class="stat-label">Independently managed</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head fade-in">
+        <div><p class="eyebrow">What I do</p><h2 class="section-title">One person, the whole funnel.</h2></div>
+        <p class="section-note">As a freelancer I sit close to every part of the campaign — strategy, execution and reporting — instead of handing pieces off between departments.</p>
+      </div>
+
+      <div class="grid-3 fade-in">
+        <div class="card">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="var(--ink)" stroke-width="2" aria-hidden="true"><circle cx="14" cy="14" r="10"/><line x1="21.5" y1="21.5" x2="30" y2="30"/></svg>
+          <h3>Search &amp; SEO</h3>
+          <p>On-page fixes, keyword mapping and content structure so search engines can actually find what your site does well.</p>
+        </div>
+        <div class="card">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="var(--ink)" stroke-width="2" aria-hidden="true"><circle cx="9" cy="10" r="4"/><circle cx="25" cy="8" r="4"/><circle cx="17" cy="26" r="4"/><line x1="12.3" y1="11.6" x2="21.7" y2="9.4"/><line x1="12.5" y1="12.8" x2="14.5" y2="22.5"/><line x1="21.5" y1="10.8" x2="19.5" y2="22.5"/></svg>
+          <h3>Social Media</h3>
+          <p>Content calendars and community management built around what your audience actually stops to read.</p>
+        </div>
+        <div class="card">
+          <svg width="34" height="34" viewBox="0 0 34 34" fill="none" stroke="var(--ink)" stroke-width="2" aria-hidden="true"><path d="M4 26 L12 14 L18 18 L30 5"/><polyline points="22 5 30 5 30 13"/></svg>
+          <h3>Paid Campaigns</h3>
+          <p>Budget-aware Google and Meta ad setups, with reporting that shows exactly where the money went.</p>
+        </div>
+      </div>
+      <p style="margin-top:32px;"><a href="#services" class="btn btn-ghost">View all services</a></p>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">About Monika</p>
+        <h2 class="section-title" style="margin-top:10px; font-size:clamp(30px,5vw,46px);">Curious about numbers before I was curious about marketing.</h2>
+        <p class="lede" style="margin-top:20px;">I got into digital marketing almost by accident — I liked figuring out why one social post did better than another, and that question never really left me. A year later, it's still what gets me up in the morning: a dashboard full of numbers waiting to be explained.</p>
+      </div>
+      <div>
+        <svg viewBox="0 0 420 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustration of a magnifying glass over a bar chart, representing SEO and data analysis">
+          <rect x="0" y="0" width="420" height="320" fill="var(--white)" stroke="var(--hairline)"/>
+          <g stroke="var(--ink)" stroke-width="2" fill="none">
+            <rect x="60" y="190" width="26" height="70"/>
+            <rect x="100" y="150" width="26" height="110"/>
+            <rect x="140" y="170" width="26" height="90"/>
+            <rect x="180" y="110" width="26" height="150"/>
+            <rect x="220" y="130" width="26" height="130"/>
+          </g>
+          <line x1="40" y1="260" x2="300" y2="260" stroke="var(--hairline-dark)" stroke-width="1"/>
+          <g stroke="var(--ink)" stroke-width="3" fill="none">
+            <circle cx="300" cy="150" r="46" class="draw-path" style="stroke-dasharray:400;"/>
+            <line x1="333" y1="183" x2="368" y2="218" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head fade-in">
+        <div><p class="eyebrow">My story</p><h2 class="section-title">From intern to independent.</h2></div>
+      </div>
+      <div class="grid-2 fade-in">
+        <p style="font-size:16px; max-width:56ch;">Digital marketing wasn't something I planned out years in advance — it's something I grew into by doing it. During my internship at JClick Solutions, I got to sit in on real client accounts: writing ad copy that had to actually convert, watching keyword rankings move week by week, and learning that "engagement" is a number you can influence on purpose, not something that just happens.</p>
+        <p style="font-size:16px; max-width:56ch;">That internship is where the fundamentals stuck — how to read a campaign report properly, how to talk about strategy without hiding behind jargon, and how much of good marketing is just paying close attention. When it ended, I decided to keep going on my own, and freelancing let me apply everything I'd learned directly, project by project, client by client.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head fade-in">
+        <div><p class="eyebrow">Timeline</p><h2 class="section-title">How I got here.</h2></div>
+      </div>
+      <div class="timeline fade-in">
+        <div class="timeline-item">
+          <p class="eyebrow">Internship</p>
+          <h3>JClick Solutions</h3>
+          <p>Worked across SEO audits, social content scheduling and campaign reporting for client accounts. Learned how a marketing team actually operates day to day, not just the theory behind it.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="eyebrow">Year 1 · Freelance</p>
+          <h3>Going independent</h3>
+          <p>Took on my first freelance clients — small businesses and a couple of D2C brands — handling SEO, social media management and small-budget ad campaigns from strategy to reporting.</p>
+        </div>
+        <div class="timeline-item">
+          <p class="eyebrow">Now</p>
+          <h3>Building a steady freelance practice</h3>
+          <p>Focused on a small roster of clients I can give proper attention to, with an emphasis on measurable growth over vanity metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head fade-in">
+        <div><p class="eyebrow">Skills</p><h2 class="section-title">Tools I actually use.</h2></div>
+        <p class="section-note">Practical, hands-on skills built through real campaigns rather than certificates alone.</p>
+      </div>
+      <div class="grid-3 fade-in">
+        <div class="card"><h3>Research &amp; Strategy</h3><p>Keyword research, competitor analysis, audience mapping and campaign planning.</p></div>
+        <div class="card"><h3>Content &amp; Social</h3><p>Content calendars, copywriting, caption writing and community management.</p></div>
+        <div class="card"><h3>Paid &amp; Analytics</h3><p>Google Ads and Meta Ads setup, budget tracking, and translating raw data into a plain-language report.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section id="services" style="padding-bottom:56px;">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h2 class="section-title" style="margin-top:10px; font-size:clamp(30px,5vw,46px); max-width:18ch;">Six ways I help a brand get noticed for the right reasons.</h2>
+      <p class="lede" style="margin-top:20px;">I don't sell bundles you don't need. Most clients start with one or two services below and expand once we see what's working.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <ul class="numbered-list fade-in">
+        <li class="numbered-row"><span class="num">01</span><h3>Search Engine Optimisation</h3><p>Technical and on-page audits, keyword mapping, metadata rewrites and content structure fixes so search engines understand what a page is actually for. Includes a plain-language monthly ranking report.</p></li>
+        <li class="numbered-row"><span class="num">02</span><h3>Social Media Management</h3><p>Content calendars, caption writing, posting schedules and community replies across the platforms your audience actually uses — built around a consistent voice rather than trend-chasing.</p></li>
+        <li class="numbered-row"><span class="num">03</span><h3>Paid Advertising</h3><p>Google Search and Meta ad campaigns set up with clear budgets, audience targeting and conversion tracking, so every rupee spent can be traced back to a result.</p></li>
+        <li class="numbered-row"><span class="num">04</span><h3>Content Marketing</h3><p>Blog posts, landing page copy and email newsletters written to match how your customers actually search and speak — not generic filler content.</p></li>
+        <li class="numbered-row"><span class="num">05</span><h3>Email Marketing</h3><p>Welcome sequences, newsletters and promotional campaigns with subject lines and send times tested against your own audience, not a generic best-practice guide.</p></li>
+        <li class="numbered-row"><span class="num">06</span><h3>Analytics &amp; Reporting</h3><p>Monthly reports that translate traffic, engagement and ad data into three or four decisions worth making next — not forty metrics nobody will read.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head fade-in">
+        <div><p class="eyebrow">How we'd work together</p><h2 class="section-title">A simple, honest process.</h2></div>
+        <p class="section-note">No lengthy onboarding decks — just a clear path from first call to first report.</p>
+      </div>
+      <div class="grid-3 fade-in">
+        <div class="card">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="var(--ink)" stroke-width="2" aria-hidden="true"><circle cx="15" cy="15" r="12"/><path d="M15 9 v6 l4 4"/></svg>
+          <h3>Discovery call</h3><p>A short conversation about your goals, current channels and what "success" would actually look like in three months.</p>
+        </div>
+        <div class="card">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="var(--ink)" stroke-width="2" aria-hidden="true"><rect x="5" y="5" width="20" height="20"/><line x1="9" y1="12" x2="21" y2="12"/><line x1="9" y1="18" x2="17" y2="18"/></svg>
+          <h3>Plan &amp; proposal</h3><p>A written plan covering scope, timeline and reporting cadence, so there are no surprises once work begins.</p>
+        </div>
+        <div class="card">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="var(--ink)" stroke-width="2" aria-hidden="true"><path d="M4 22 L11 12 L16 16 L26 4"/></svg>
+          <h3>Execution &amp; reporting</h3><p>Work begins on the agreed channels, with a regular report showing exactly what moved and why.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PORTFOLIO ================= -->
+  <section id="portfolio" style="padding-bottom:56px;">
+    <div class="wrap">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section-title" style="margin-top:10px; font-size:clamp(30px,5vw,46px); max-width:18ch;">Real campaigns, real numbers.</h2>
+      <p class="lede" style="margin-top:20px;">A few of the projects I've worked on over the past year, as a freelancer and during my internship at JClick Solutions. Client names are kept private where requested; the results are exactly as reported.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="case-card fade-in">
+        <div class="case-visual">
+          <svg viewBox="0 0 220 160" width="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polyline points="10,140 50,120 90,128 130,80 170,90 210,30" fill="none" stroke="var(--white)" stroke-width="3"/><circle cx="210" cy="30" r="5" fill="var(--white)"/></svg>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">SEO</span><span class="case-tag">Local Business</span>
+          <h3>Local bakery — organic visibility</h3>
+          <p>The client's website wasn't showing up for basic local searches like "bakery near me." I rebuilt on-page metadata, cleaned up their Google Business profile, and restructured product pages around real search terms customers were typing in.</p>
+          <div class="case-metrics">
+            <div class="case-metric"><b>+64%</b><span>Organic visits</span></div>
+            <div class="case-metric"><b>12</b><span>Keywords ranking page 1</span></div>
+            <div class="case-metric"><b>3 mo</b><span>Time to result</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in">
+        <div class="case-visual">
+          <svg viewBox="0 0 220 160" width="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="20" y="90" width="18" height="50" fill="var(--white)"/><rect x="50" y="70" width="18" height="70" fill="var(--white)"/><rect x="80" y="80" width="18" height="60" fill="var(--white)"/><rect x="110" y="45" width="18" height="95" fill="var(--white)"/><rect x="140" y="30" width="18" height="110" fill="var(--white)"/><rect x="170" y="55" width="18" height="85" fill="var(--white)"/></svg>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Social Media</span><span class="case-tag">D2C Brand</span>
+          <h3>Skincare brand — Instagram growth</h3>
+          <p>A small skincare brand was posting inconsistently with no clear content plan. I introduced a structured content calendar, rewrote their captions around real customer questions, and set a steady publishing rhythm across the quarter.</p>
+          <div class="case-metrics">
+            <div class="case-metric"><b>+41%</b><span>Engaged followers</span></div>
+            <div class="case-metric"><b>3x</b><span>Weekly posting consistency</span></div>
+            <div class="case-metric"><b>+28%</b><span>Profile visits</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in">
+        <div class="case-visual">
+          <svg viewBox="0 0 220 160" width="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 130 L60 90 L90 105 L150 40 L200 20" fill="none" stroke="var(--white)" stroke-width="3"/><polyline points="180 20 200 20 200 40" fill="none" stroke="var(--white)" stroke-width="3"/></svg>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Paid Ads</span><span class="case-tag">Service Business</span>
+          <h3>Home services company — lead generation</h3>
+          <p>A small home-services business was spending on Google Ads with no clear read on which clicks turned into calls. I restructured the campaigns around intent-based keywords and set up proper conversion tracking so spend could be justified.</p>
+          <div class="case-metrics">
+            <div class="case-metric"><b>-22%</b><span>Cost per lead</span></div>
+            <div class="case-metric"><b>+35</b><span>Qualified leads / mo</span></div>
+            <div class="case-metric"><b>2</b><span>Campaigns restructured</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card fade-in">
+        <div class="case-visual">
+          <svg viewBox="0 0 220 160" width="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M40 20 L40 140 L180 140" fill="none" stroke="var(--white)" stroke-width="2"/><rect x="55" y="100" width="20" height="40" fill="var(--white)"/><rect x="90" y="70" width="20" height="70" fill="var(--white)"/><rect x="125" y="90" width="20" height="50" fill="var(--white)"/><rect x="160" y="50" width="20" height="90" fill="var(--white)"/></svg>
+        </div>
+        <div class="case-body">
+          <span class="case-tag">Internship</span><span class="case-tag">JClick Solutions</span>
+          <h3>Client reporting overhaul</h3>
+          <p>During my internship at JClick Solutions, I helped redesign a recurring client report — trimming it from dozens of raw metrics down to the handful that actually explained performance, in language a non-marketer could follow.</p>
+          <div class="case-metrics">
+            <div class="case-metric"><b>-70%</b><span>Report length</span></div>
+            <div class="case-metric"><b>1</b><span>Reporting template reused across accounts</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" style="padding-bottom:56px;">
+    <div class="wrap">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section-title" style="margin-top:10px; font-size:clamp(30px,5vw,46px); max-width:16ch;">Tell me about your project.</h2>
+      <p class="lede" style="margin-top:20px;">Whether it's a single audit or ongoing management across channels, the first step is always the same — a short message about where your marketing stands today.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap hero-grid">
+      <div>
+        <form class="contact-form" id="contactForm">
+          <div class="field">
+            <label for="nameField">Full name</label>
+            <input type="text" id="nameField" name="name" required placeholder="Your name">
+          </div>
+          <div class="field">
+            <label for="emailField">Email address</label>
+            <input type="email" id="emailField" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="field">
+            <label for="subjectField">What do you need help with?</label>
+            <input type="text" id="subjectField" name="subject" placeholder="e.g. SEO, social media, paid ads">
+          </div>
+          <div class="field">
+            <label for="messageField">Project details</label>
+            <textarea id="messageField" name="message" required placeholder="A little about your business and goals"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:fit-content;">Prepare message</button>
+          <p class="form-note" id="formStatus">Fill in the form, then send it using the email button so it reaches my inbox directly.</p>
+        </form>
+      </div>
+
+      <div>
+        <div class="card" style="margin-bottom:24px;">
+          <p class="eyebrow" style="margin-bottom:10px;">Email</p>
+          <p style="font-size:16px; margin:0 0 14px;">monika.digitalmarketing@example.com</p>
+          <a class="btn btn-ghost" href="mailto:monika.digitalmarketing@example.com?subject=Project%20Enquiry">Email me directly</a>
+        </div>
+        <div class="card" style="margin-bottom:24px;">
+          <p class="eyebrow" style="margin-bottom:10px;">Availability</p>
+          <p style="font-size:15px; margin:0;">Currently taking on a limited number of new freelance projects each month, so response times stay quick and every client gets proper attention.</p>
+        </div>
+        <div class="card">
+          <p class="eyebrow" style="margin-bottom:10px;">Response time</p>
+          <p style="font-size:15px; margin:0;">I reply to every enquiry within one to two business days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="inverted">
+    <div class="wrap center">
+      <p class="eyebrow on-dark">Let's work together</p>
+      <h2 class="section-title">Have a campaign that needs a second pair of eyes?</h2>
+      <p style="max-width:56ch; margin:16px auto 32px;">I take on a limited number of freelance projects at a time so each one gets proper attention. Tell me what you're working on.</p>
+      <a href="#contact" class="btn" style="border-color:var(--white); color:var(--white);">Get in touch</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <p class="brand" style="font-size:18px;">Monika</p>
+        <p style="color:var(--steel); font-size:14px; max-width:32ch;">Freelance digital marketing specialist — SEO, social and paid strategy for small businesses.</p>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Monika. All rights reserved.</span>
+      <span>Built &amp; maintained by Monika</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  var toggle = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('.main-nav');
+  if (toggle && nav) {
+    toggle.addEventListener('click', function () {
+      nav.classList.toggle('open');
+      var expanded = nav.classList.contains('open');
+      toggle.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () { nav.classList.remove('open'); });
+    });
+  }
+
+  var faders = document.querySelectorAll('.fade-in');
+  if ('IntersectionObserver' in window && faders.length) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    faders.forEach(function (el) { observer.observe(el); });
+  } else {
+    faders.forEach(function (el) { el.classList.add('visible'); });
+  }
+
+  var form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var status = document.getElementById('formStatus');
+      var name = document.getElementById('nameField').value.trim();
+      if (status) {
+        status.textContent = 'Thanks' + (name ? ', ' + name : '') + ' — your message is ready. Please send it using the email button above so it reaches my inbox directly.';
+      }
+    });
+  }
+});
+</script>
+
+</body>
+</html>
